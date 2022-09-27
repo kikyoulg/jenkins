@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('build') {
       parallel {
-        stage('build') {
+        stage('build images') {
           steps {
             sh '''mvn clean package -Dmaven.test.skip=true
 docker build -t registry.zet-fl.com/msmp/fedx-api:latest
