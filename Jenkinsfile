@@ -1,36 +1,19 @@
 pipeline {
   agent any
   stages {
-    stage('build image') {
-      parallel {
-        stage('sonar scan') {
-          steps {
-            sh 'echo "hello"'
-          }
-        }
-
-        stage('') {
-          steps {
-            sh 'echo "hello"'
-          }
-        }
-
-      }
-    }
-
-    stage('push image') {
-      steps {
-        sh 'docker push '
-      }
-    }
-
-    stage('pod update') {
+    stage('build') {
       steps {
         sh 'echo "hello"'
       }
     }
 
-    stage('metersphere') {
+    stage('deploy') {
+      steps {
+        sh 'echo "hello"'
+      }
+    }
+
+    stage('auto test') {
       steps {
         sh 'echo "hello"'
       }
