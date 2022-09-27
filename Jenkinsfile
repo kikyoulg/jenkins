@@ -9,5 +9,11 @@ docker push registry.zet-fl.com/msmp/fedx-api:${IMAGE_TAG}'''
       }
     }
 
+    stage('push-image') {
+      steps {
+        sh 'docker push '
+      }
+    }
+
   }
 }
